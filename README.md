@@ -16,7 +16,7 @@ _[AIGuardX](https://aisecshield.zeroshield.ai), a core module of <a href="https:
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
-![mitmproxy](https://img.shields.io/badge/mitmproxy-HTTP(S)_intercept-orange?style=flat-square)
+![proxy](https://img.shields.io/badge/mitmproxy-HTTP(S)_intercept-orange?style=flat-square)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=flat-square&logo=docker&logoColor=white)
 
 ## 🚀 [Explore ZeroShield Solutions](https://zeroshield.ai)
@@ -42,7 +42,7 @@ _[AIGuardX](https://aisecshield.zeroshield.ai), a core module of <a href="https:
 
 ## About AIGuardX
 
-[**AIGuardX**](https://aisecshield.zeroshield.ai) is an advanced endpoint security solution within the ZeroShield ecosystem (Module 5). It protects organizations from the risks of Generative AI by deploying lightweight agents and a local MITM proxy directly on user machines.
+[**AIGuardX**](https://aisecshield.zeroshield.ai) is an advanced endpoint security solution within the ZeroShield ecosystem (Module 5). It protects organizations from the risks of Generative AI by deploying lightweight agents and a local proxy directly on user machines.
 
 Unlike traditional cloud-based proxies, [AIGuardX](https://aisecshield.zeroshield.ai) intercepts AI-bound traffic at the source. This enables **zero-latency redaction** and **local blocking**, so sensitive PII, API keys, or proprietary code never leave the workstation. The agent supports corporate proxy environments, file-based logging, and reliable autostart via the Windows Registry Run key for consistent behavior after reboot and Fast Startup.
 
@@ -52,7 +52,7 @@ Unlike traditional cloud-based proxies, [AIGuardX](https://aisecshield.zeroshiel
 
 [AIGuardX](https://aisecshield.zeroshield.ai) follows a **Deploy → Monitor → Enforce** lifecycle, connecting centralized governance with distributed endpoint execution.
 
-1. **Agent Deployment**: Lightweight agents and a local MITM proxy are installed on user machines to intercept AI traffic (ChatGPT, Claude, Cursor, Copilots, etc.).
+1. **Agent Deployment**: Lightweight agents and a local proxy are installed on user machines to intercept AI traffic (ChatGPT, Claude, Cursor, Copilots, etc.).
 2. **Local Enforcement**: The agent pulls real-time policies from the [AIGuardX](https://aisecshield.zeroshield.ai) platform. Blocking and redaction run locally for zero-latency security.
 3. **Telemetry Stream**: Interaction metadata and security events are sent to the central dashboard for forensics and compliance reporting.
 
@@ -73,7 +73,7 @@ graph TB
 
     subgraph Endpoint["Endpoint (user machine)"]
         Agent[AIGuardX Agent]
-        Proxy[MITM Proxy :8765]
+        Proxy[Proxy]
         Agent --> Proxy
     end
 
@@ -107,7 +107,7 @@ graph TB
 ```mermaid
 sequenceDiagram
     participant App as AI app
-    participant Proxy as MITM proxy
+    participant Proxy as proxy
     participant Backend as AIGuardX backend
     participant LLM as LLM provider
 
@@ -203,9 +203,9 @@ Every blocked or redacted event produces a detailed log for forensic analysis:
 
 ## Endpoint Agent & Deployment
 
-[AIGuardX](https://aisecshield.zeroshield.ai) deploys an endpoint agent and a local MITM proxy on Windows (and supports macOS/Linux patterns):
+[AIGuardX](https://aisecshield.zeroshield.ai) deploys an endpoint agent and a local proxy on Windows (and supports macOS/Linux patterns):
 
-* **Single installer**: One executable installs the agent and proxy, configures the system proxy, and installs the MITM CA into the trust store.
+* **Single installer**: One executable installs the agent and proxy, configures the system proxy, and installs the proxy CA into the trust store.
 * **Autostart**: Uses the Windows Registry Run key (not only Task Scheduler) so the agent and proxy start reliably after login, including with Fast Startup enabled. A configurable delay (e.g. 60s) ensures the network and proxy are ready before starting.
 * **Corporate proxy**: Backend registration and telemetry work through corporate proxies; original proxy settings are preserved and restored on uninstall.
 * **Logging**: File-based logs (e.g. `~/.aiguardx/agent.log`, proxy logs) support troubleshooting on headless or locked-down machines.
@@ -259,3 +259,4 @@ Contributing factors (OWASP LLM/MCP/Agentic, PII severity, LLM-Guard/Bedrock sig
 ---
 
 All rights reserved. This software and its documentation are the intellectual property of [ZeroShield](https://zeroshield.ai).
+
