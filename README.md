@@ -42,7 +42,7 @@ _[AIGuardX](https://aisecshield.zeroshield.ai), a core module of <a href="https:
 
 ## About AIGuardX
 
-[**AIGuardX**](https://aisecshield.zeroshield.ai) is an advanced endpoint security solution within the ZeroShield ecosystem (Module 5). It protects organizations from the risks of Generative AI by deploying lightweight agents and a local proxy directly on user machines.
+[**AIGuardX**](https://aisecshield.zeroshield.ai) is an advanced endpoint security solution within the ZeroShield ecosystem. It protects organizations from the risks of Generative AI by deploying lightweight agents and a local proxy directly on user machines.
 
 Unlike traditional cloud-based proxies, [AIGuardX](https://aisecshield.zeroshield.ai) intercepts AI-bound traffic at the source. This enables **zero-latency redaction** and **local blocking**, so sensitive PII, API keys, or proprietary code never leave the workstation. The agent supports corporate proxy environments, file-based logging, and reliable autostart via the Windows Registry Run key for consistent behavior after reboot and Fast Startup.
 
@@ -259,4 +259,5 @@ Contributing factors (OWASP LLM/MCP/Agentic, PII severity, LLM-Guard/Bedrock sig
 ---
 
 All rights reserved. This software and its documentation are the intellectual property of [ZeroShield](https://zeroshield.ai).
+
 
