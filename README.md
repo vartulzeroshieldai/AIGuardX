@@ -44,9 +44,9 @@ _[AIGuardX](https://aisecshield.zeroshield.ai), a core module of <a href="https:
 
 ## About AIGuardX
 
-[**AIGuardX**](https://aisecshield.zeroshield.ai) is an advanced endpoint security solution within the ZeroShield ecosystem. It provides **loss prevention** for generative AI tools—including **ChatGPT**, **Gemini**, **Cursor**, **Claude**, **GitHub Copilot**, and similar applications—by deploying lightweight agents and a local proxy directly on user machines. AIGuardX is not a real-time AI guardrail layer; it focuses on **preventing data loss and policy violations** before prompts and responses leave the endpoint.
+[**AIGuardX**](https://aisecshield.zeroshield.ai) is an advanced endpoint security and governance solution in the ZeroShield ecosystem. It delivers loss prevention for generative AI applications such as ChatGPT, Gemini, Cursor, Claude, and GitHub Copilot by running a lightweight agent and a local proxy on each user machine. Rather than acting as a real-time AI guardrail in the cloud, AIGuardX stops data loss and policy violations at the endpoint—before prompts or responses are sent to external AI services.
 
-Unlike traditional cloud-based proxies, [AIGuardX](https://aisecshield.zeroshield.ai) intercepts AI-bound traffic at the source. This enables **zero-latency redaction** and **local blocking**, so sensitive PII, API keys, or proprietary code never leave the workstation. The agent supports corporate proxy environments, file-based logging, and reliable autostart via the Windows Registry Run key for consistent behavior after reboot and Fast Startup.
+[**AIGuardX**](https://aisecshield.zeroshield.ai) inspects AI traffic at the endpoint instead of routing it through a cloud proxy. That allows local blocking and zero-latency redaction, so PII, API keys, and proprietary code stay on the device. The agent works behind corporate proxies, writes file-based logs for support and audit, and uses the Windows Registry Run key for reliable autostart after reboot and Fast Startup, so protection stays on without extra user action.
 
 ---
 
@@ -332,5 +332,6 @@ https://github.com/user-attachments/assets/3c147977-c5f4-4f4d-86a0-3a1c57d5a342
 ---
 
 All rights reserved. This software and its documentation are the intellectual property of [ZeroShield](https://zeroshield.ai).
+
 
 
